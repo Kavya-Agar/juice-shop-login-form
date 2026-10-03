@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Secure Login Form Demo</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="login-card">
+    <h1>Login</h1>
+    <p class="subtitle">A minimal login form with client-side validation (HW 2-B, Part 2)</p>
+
+    <form id="loginForm" novalidate>
+      <div class="field">
+        <label for="email">Email</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          placeholder="you@example.com"
+          autocomplete="username"
+          required
+        />
+        <span class="error" id="emailError"></span>
+      </div>
+
+      <div class="field">
+        <label for="password">Password</label>
+        <input
+          type="password"
+          id="password"
+          name="password"
+          placeholder="At least 8 characters"
+          autocomplete="current-password"
+          required
+          minlength="8"
+        />
+        <span class="error" id="passwordError"></span>
+      </div>
+
+      <button type="submit">Log in</button>
+
+      <p class="formStatus" id="formStatus" role="status" aria-live="polite"></p>
+    </form>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

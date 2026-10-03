@@ -1,0 +1,14 @@
+{
+  "name": "juice-shop-login-form-demo",
+  "version": "1.0.0",
+  "description": "Minimal HTML/JS login form with client- and server-side validation, built for HW 2-B (OWASP Juice Shop / OWASP Top 10).",
+  "main": "server-example.js",
+  "scripts": {
+    "start": "node server-example.js"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "express": "^4.19.2"
+  }
+}
