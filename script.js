@@ -20,7 +20,7 @@ const formStatus = document.getElementById("formStatus");
 
 function isValidEmail(value) {
   // Minimal check per assignment spec: must contain "@" and not be empty.
-  // (A full RFC-5322 regex is intentionally avoided here — real email
+  // (A full RFC-5322 regex is intentionally avoided here, since real email
   // validation should ultimately happen server-side via a confirmation link.)
   return value.trim().length > 0 && value.includes("@");
 }
@@ -82,7 +82,7 @@ form.addEventListener("submit", async (event) => {
 /**
  * Stand-in for a real network call, so this demo works with no backend
  * running. It deliberately mirrors the checks in server-example.js to
- * illustrate "never trust the client" — see that file for the real
+ * illustrate "never trust the client". See that file for the real
  * server-side validation + bcrypt password check.
  */
 async function fakeServerValidate(email, password) {
@@ -92,5 +92,5 @@ async function fakeServerValidate(email, password) {
     return { ok: false, message: "Server rejected the request: invalid input." };
   }
 
-  return { ok: true, message: "Validation passed (demo only — no real account exists)." };
+  return { ok: true, message: "Validation passed (demo only, no real account exists)." };
 }

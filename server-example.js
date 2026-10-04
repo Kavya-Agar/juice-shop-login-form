@@ -3,7 +3,7 @@
  *
  * Minimal reference implementation of SERVER-SIDE validation + secure
  * password handling for the login form in index.html. This is not wired
- * up to a database — it's here to document the pattern asked for in the
+ * up to a database. It's here to document the pattern asked for in the
  * assignment (Part 1: secure password handling with bcrypt; Part 2:
  * both client- and server-side validation).
  *
@@ -69,7 +69,7 @@ app.post("/api/login", async (req, res) => {
   }
 
   // 4) On success, issue a session (e.g., signed, HttpOnly, Secure cookie
-  //    or a short-lived JWT) — omitted here since this file only
+  //    or a short-lived JWT). Omitted here since this file only
   //    demonstrates validation + password handling.
   return res.json({ message: "Login successful (demo)." });
 });
